@@ -11,7 +11,9 @@ server.views({
   path: "templates",
   engines: {
     html: require("handlebars")
-  }
+  },
+  layoutPath:"layouts", //as in the layouts folder
+  layout: "default" //as in default.html
 });
 
 server.route({
@@ -20,7 +22,15 @@ server.route({
   handler: function(req, reply){
     reply.view("index");
   }
-})
+});
+
+server.route({
+  method: "GET",
+  path: "/classes",
+  handler: function(req, reply){
+    reply.view("classes");
+  }
+});
 
 server.route({
   method: "GET",
