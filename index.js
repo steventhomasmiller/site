@@ -39,7 +39,7 @@ server.route({
       title: "Classes",
       classes: JSON.parse(data)
       });
-    })
+    });
   }
 });
 
