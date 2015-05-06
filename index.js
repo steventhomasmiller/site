@@ -20,7 +20,9 @@ server.route({
   method: "GET",
   path: "/",
   handler: function(req, reply){
-    reply.view("index");
+    reply.view("index", {
+      title: "Home"
+    });
   }
 });
 
@@ -28,7 +30,9 @@ server.route({
   method: "GET",
   path: "/classes",
   handler: function(req, reply){
-    reply.view("classes");
+    reply.view("classes", {
+      title: "Classes"
+    });
   }
 });
 
