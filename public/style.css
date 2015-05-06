@@ -7,3 +7,7 @@ nav a {
   color: black;
   text-decoration: bold;
 }
+
+ul li {
+  color: red;
+}
